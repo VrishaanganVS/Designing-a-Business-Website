@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Food Ordering Login Page</title>
+    <title>Food Ordering Signup Page</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -21,15 +21,17 @@
         border: 1px solid #ddd;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 0.5s ease;
+        animation: slideUp 0.5s ease;
       }
 
-      @keyframes fadeIn {
+      @keyframes slideUp {
         from {
           opacity: 0;
+          transform: translateY(50px);
         }
         to {
           opacity: 1;
+          transform: translateY(0);
         }
       }
 
@@ -46,7 +48,6 @@
         display: block;
         margin-bottom: 10px;
         font-weight: bold;
-        transition: color 0.3s ease;
       }
 
       input[type="text"],
@@ -90,35 +91,24 @@
         bottom: 0;
         width: 100%;
       }
-
-      
-      .footer {
-        animation: slideIn 0.5s ease;
-      }
-
-      @keyframes slideIn {
-        from {
-          transform: translateY(100%);
-        }
-        to {
-          transform: translateY(0);
-        }
-      }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Login</h1>
-      <form id="loginForm" onsubmit="return authenticate()">
+      <h1>Signup</h1>
+      <form>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Signup">
       </form>
-      <p>Don't have an account? <a href="http://127.0.0.1:5500/Sign-up.html">Sign up</a></p>
+      <p>Already have an account? <a href="http://127.0.0.1:5500/login.html">Login</a></p>
     </div>
     <div class="footer">
       &copy; 2024 Food Ordering Site
